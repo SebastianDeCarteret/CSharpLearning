@@ -26,29 +26,34 @@ namespace EmployeeNames
             GetSetJob();
             GetSetEmail();
             GetSetPhone();
+            Console.WriteLine("Name Badge:");
+            // note: table is an installed package!
             var table = new ConsoleTable("name", "job", "email", "phone");
             table.AddRow(EmployeeDetailsInstance.name, EmployeeDetailsInstance.job, EmployeeDetailsInstance.email, EmployeeDetailsInstance.phone);
             table.Write();
+            // 
+            Console.WriteLine($"Hello {EmployeeDetailsInstance.name}");
         }
+        // note: I have added `!` to say I know it's a null value here
         private static void GetSetName()
         {
             Console.WriteLine("Input Name:");
-            EmployeeDetailsInstance.name = Console.ReadLine();
+            EmployeeDetailsInstance!.name = Console.ReadLine();
         }
         private static void GetSetJob()
         {
             Console.WriteLine("Input Job:");
-            EmployeeDetailsInstance.job = Console.ReadLine();
+            EmployeeDetailsInstance!.job = Console.ReadLine();
         }
         private static void GetSetEmail()
         {
             Console.WriteLine("Input Email:");
-            EmployeeDetailsInstance.email = Console.ReadLine();
+            EmployeeDetailsInstance!.email = Console.ReadLine();
         }
         private static void GetSetPhone()
         {
             Console.WriteLine("Input Phone:");
-            EmployeeDetailsInstance.phone = Console.ReadLine();
+            EmployeeDetailsInstance!.phone = Console.ReadLine();
         }
     }
 }
