@@ -19,7 +19,6 @@ namespace MyFirstProgram
             //EmployeeBadge.GetSetDetials();
 
             // ### Rock Paper Scissors ###
-            //RockPaperScissors.GetSetAction();
             RockPaperScissors.StartGame();
         }
     }
